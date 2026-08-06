@@ -1,0 +1,35 @@
+{
+    "name": "MUZO",
+    "short_name": "MUZO",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0B0E11",
+    "theme_color": "#0E8074",
+    "description": "MUZO — Azərbaycanın super-tətbiqi. Al, sat, usta tap, butiklərdən geyin. Sən soruş — MUZO həll etsin.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

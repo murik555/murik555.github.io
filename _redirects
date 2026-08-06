@@ -1,0 +1,10 @@
+# Single-page-app rule for Netlify.
+#
+# Flutter web is one index.html plus client-side routing. Without this, any URL
+# other than "/" is a real request Netlify cannot satisfy, and it answers with
+# its own 404 page — which is exactly what happened to muzo1.netlify.app.
+#
+# This file lives in web/ (not build/web) on purpose: Flutter copies web/ into
+# every build, so the rule survives each deploy instead of having to be added
+# by hand afterwards.
+/*    /index.html   200

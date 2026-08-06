@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <!-- Always revalidate the shell so a new deploy is never masked by a stale
+       cached index.html / bootstrap. Combined with the auto-update script
+       below, this makes fresh code appear on a single reload. -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="MUZO — Azərbaycanın super-tətbiqi. Al, sat, usta tap, butiklərdən geyin. Sən soruş — MUZO həll etsin.">
+  <meta name="theme-color" content="#0E8074">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MUZO — Sən soruş. MUZO həll etsin.">
+  <meta property="og:description" content="Azərbaycanın super-tətbiqi: al, sat, usta tap, butiklərdən geyin. Butiklər, marketplace və AI köməkçi bir yerdə.">
+  <meta property="og:image" content="https://muzo1.netlify.app/icons/Icon-512.png">
+  <meta property="og:url" content="https://muzo1.netlify.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MUZO — Sən soruş. MUZO həll etsin.">
+  <meta name="twitter:description" content="Azərbaycanın super-tətbiqi: al, sat, usta tap, butiklərdən geyin.">
+  <meta name="twitter:image" content="https://muzo1.netlify.app/icons/Icon-512.png">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MUZO">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>MUZO — Sən soruş. MUZO həll etsin.</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js?v=1786039097" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js?v=1786039097" async></script>
+
+  <!--
+    Auto-update: the Flutter service worker calls skipWaiting() on install, so a
+    freshly deployed build activates and takes control right away. When that new
+    worker takes over, `controllerchange` fires and we reload once — so a new
+    deploy shows up on the user's next visit without any manual cache-clearing.
+    We also poke update() on load (and every 60s) to notice new builds fast.
+  -->
+  <script>
+    (function () {
+      if (!('serviceWorker' in navigator)) return;
+      var reloaded = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (reloaded) return;
+        reloaded = true;
+        window.location.reload();
+      });
+      navigator.serviceWorker.ready.then(function (reg) {
+        var poke = function () { try { reg.update(); } catch (e) {} };
+        poke();
+        setInterval(poke, 60000);
+      }).catch(function () {});
+    })();
+  </script>
+</body>
+</html>
